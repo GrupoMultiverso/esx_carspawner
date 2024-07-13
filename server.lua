@@ -13,7 +13,7 @@ local ESX = exports["es_extended"]:getSharedObject()
 Config = Config or {}
 
 ESX.RegisterCommand(
-    "carros",
+    "vehicles",
     "user",  
     function(xPlayer, args, showError)
         if not xPlayer then
