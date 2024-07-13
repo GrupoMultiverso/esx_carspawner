@@ -7,6 +7,7 @@
 
 -- client.lua
 
+-- ESX new export logic
 local ESX = exports["es_extended"]:getSharedObject()
 
 -- Ensure Config is loaded
@@ -16,13 +17,13 @@ Config = Config or {}
 RegisterNetEvent("esx_car:openMenu")
 AddEventHandler("esx_car:openMenu", function()
     local elements = {}
-
+    -- Loop the Vehicles in the Config file
     for _, vehicle in ipairs(Config.Vehicles) do
         table.insert(elements, {label = vehicle, value = vehicle})
     end
-
+    -- Close all menus if any
     ESX.UI.Menu.CloseAll()
-
+    -- Build the menu
     ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'car_spawn_menu', {
         title    = 'Vehicles',
         align    = 'top-left',
