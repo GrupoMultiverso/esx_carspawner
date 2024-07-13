@@ -24,7 +24,7 @@ AddEventHandler("esx_car:openMenu", function()
     ESX.UI.Menu.CloseAll()
 
     ESX.UI.Menu.Open('default', GetCurrentResourceName(), 'car_spawn_menu', {
-        title    = 'Addon Cars',
+        title    = 'Vehicles',
         align    = 'top-left',
         elements = elements
     }, function(data, menu)
