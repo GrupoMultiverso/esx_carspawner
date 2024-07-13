@@ -14,7 +14,7 @@ Config = Config or {}
 
 ESX.RegisterCommand(
     "carros",
-    "user",  -- Allow all users to trigger the command but we'll handle permissions manually
+    "user",  
     function(xPlayer, args, showError)
         if not xPlayer then
             return showError("[^1ERROR^7] The xPlayer value is nil")
@@ -97,25 +97,21 @@ Citizen.CreateThread(function()
 
     -- ASCII Art Header
     local label = [[
-                ======================== POWERED BY =========================
-                 ▄████████  ▄██████▄     ▄████████   ▄▄▄▄███▄▄▄▄    ▄██████▄  
-                ███    ███ ███    ███   ███    ███ ▄██▀▀▀███▀▀▀██▄ ███    ███ 
-                ███    █▀  ███    ███   ███    █▀  ███   ███   ███ ███    ███ 
-                ███        ███    ███   ███        ███   ███   ███ ███    ███ 
-                ███        ███    ███ ▀███████████ ███   ███   ███ ███    ███ 
-                ███    █▄  ███    ███          ███ ███   ███   ███ ███    ███ 
-                ███    ███ ███    ███    ▄█    ███ ███   ███   ███ ███    ███ 
-                ████████▀   ▀██████▀   ▄████████▀   ▀█   ███   █▀   ▀██████▀  
-                =========================== AND =============================
-                 ^1██   ██ ███████ ██ ██    ██  █████  ██████   █████  ███████ 
-                 ██  ██  ██      ██  ██  ██  ██   ██ ██   ██ ██   ██ ██      
-                 █████   █████   ██    ██    ███████ ██   ██ ███████ ███████ 
-                 ██  ██  ██      ██  ██  ██  ██   ██ ██   ██ ██   ██      ██ 
-                 ██   ██ ███████ ██ ██    ██ ██   ██ ██████  ██   ██ ███████ 
+            ============================= POWERED BY ==============================
+                     ______     ______     __  __     ______   ______    
+                    /\  ___\   /\  == \   /\ \/\ \   /\  == \ /\  __ \   
+                    \ \ \__ \  \ \  __<   \ \ \_\ \  \ \  _-/ \ \ \/\ \  
+                     \ \_____\  \ \_\ \_\  \ \_____\  \ \_\    \ \_____\ 
+                      \/_____/   \/_/ /_/   \/_____/   \/_/     \/_____/ 
+            ^18b    d8 88   88 88     888888 88 Yb    dP 888888 88""Yb .dP"Y8  dP"Yb  
+            88b  d88 88   88 88       88   88  Yb  dP  88__   88__dP `Ybo." dP   Yb 
+            88YbdP88 Y8   8P 88  .o   88   88   YbdP   88""   88"Yb  o.`Y8b Yb   dP 
+            88 YY 88 `YbodP' 88ood8   88   88    YP    888888 88  Yb 8bodP'  YbodP  
+            =======================================================================
                                                                             ^0]]
 
     local ver = "1.1"
-    print("                     ^2**Tudo pronto! Iniciando script na versão: v"..ver.."**^3")
+    print("                     ^2**Everything ready! Starting resource on version: v"..ver.."**^3")
     Citizen.Wait(1000)
     print(label)
     Citizen.Wait(1000)
@@ -127,9 +123,9 @@ Citizen.CreateThread(function()
 ╠═════════════════════════════════╣
 ║ Version: ]]..ver..[[                  ║
 ║ Changes:                           ║
-║ - Adicionado Config               ║
-║ - Adicionado sistema de permissoes                       ║
-║ - Adicionado sistema de notificações             ║
+║ - Added Config               ║
+║ - Added permissions                       ║
+║ - Added notifications             ║
 ╚═════════════════════════════════╝
 ]]
 
