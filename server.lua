@@ -7,11 +7,13 @@
 
 -- server.lua
 
+-- ESX new export
 local ESX = exports["es_extended"]:getSharedObject()
 
 -- Ensure Config is loaded
 Config = Config or {}
 
+-- Build the command
 ESX.RegisterCommand(
     "vehicles",
     "user",  
@@ -26,7 +28,7 @@ ESX.RegisterCommand(
             notify(xPlayer.source, "You don't have permission to use this command.", "error")
             return
         end
-
+        -- Trigger the client event to open the menu
         TriggerClientEvent("esx_car:openMenu", xPlayer.source)
     end,
     false,
@@ -37,6 +39,7 @@ ESX.RegisterCommand(
     }
 )
 
+-- Net event to spawn a vehicle
 RegisterServerEvent('esx_car:spawnCar')
 AddEventHandler('esx_car:spawnCar', function(carName)
     local _source = source
@@ -53,7 +56,8 @@ AddEventHandler('esx_car:spawnCar', function(carName)
     if playerVehicle then
         DeleteEntity(playerVehicle)
     end
-
+    
+    -- Build the vehicle
     ESX.OneSync.SpawnVehicle(carName, playerCoords, playerHeading, nil, function(networkId)
         if networkId then
             local vehicle = NetworkGetEntityFromNetworkId(networkId)
@@ -110,7 +114,7 @@ Citizen.CreateThread(function()
             =======================================================================
                                                                             ^0]]
 
-    local ver = "1.1"
+    local ver = "1.0"
     print("                     ^2**Everything ready! Starting resource on version: v"..ver.."**^3")
     Citizen.Wait(1000)
     print(label)
