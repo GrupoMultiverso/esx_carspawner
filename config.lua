@@ -8,28 +8,9 @@
 Config = {}
 
 Config.Vehicles = {
-    "giulia_2021",
-    "m3mafia",
-    "m8keyvany_hi",
-    "chironspeedhunter",
-    "eb110",
-    "romaultimate",
-    "bossprior",
-    "shelbylbwk",
-    "agerasuper",
-    "cls19mafia",
-    "esnevox",
-    "nznismo24",
-    "918lbwk",
-    "a80",
-    "xxxxx",
-    "20xmax",
-    "rmodskyline34",
-    "r1250",
-    "gs1200",
-    "rs62",
-    "c7"
+    -- Example: "giulia_2021",
+    "police2",
 }
 
-Config.NotificationSystem = "okokNotify"  -- options: "okokNotify", "esx"
+Config.NotificationSystem = "esx"  -- options: "okokNotify", "esx"
 Config.AllowedGroups = {"admin", "superadmin"}  -- groups allowed to use the command
